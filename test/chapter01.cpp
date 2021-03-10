@@ -10,7 +10,6 @@
 
 TEST_CASE("Test Tuple") {
     raytracer::Tuple a(4.3, -4.2, 3.1, 1.0);
-
     REQUIRE(Equal(4.3, a.x_));
     REQUIRE(Equal(-4.2, a.y_));
     REQUIRE(Equal(3.1, a.z_));
@@ -19,7 +18,6 @@ TEST_CASE("Test Tuple") {
 
 TEST_CASE("Test Vector") {
     raytracer::Vector a(4.3, -4.2, 3.1);
-
     REQUIRE(Equal(4.3, a.x_));
     REQUIRE(Equal(-4.2, a.y_));
     REQUIRE(Equal(3.1, a.z_));
@@ -28,7 +26,6 @@ TEST_CASE("Test Vector") {
 
 TEST_CASE("Test Point") {
     raytracer::Point a(4.3, -4.2, 3.1);
-
     REQUIRE(Equal(4.3, a.x_));
     REQUIRE(Equal(-4.2, a.y_));
     REQUIRE(Equal(3.1, a.z_));
