@@ -9,4 +9,4 @@ add_executable(catch_tst
         chapter01.cpp
         main.cpp
         ../src/tuple.cpp
-        ../src/equal.h ../src/vector.h ../src/point.h)
+        ../src/equal_double.h ../src/vector.h ../src/point.h)

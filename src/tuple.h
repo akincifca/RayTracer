@@ -8,15 +8,27 @@
 
 namespace raytracer {
     class Tuple {
-    public:
+    private:
         double x_;
         double y_;
         double z_;
         double w_;
     public:
         Tuple();
-        Tuple(double x, double y, double z, double w);
+        explicit Tuple(double x, double y, double z, double w);
+        Tuple operator+(const Tuple & rhs) const;
         virtual ~Tuple();
+
+        [[nodiscard]] double GetX() const;
+        [[nodiscard]] double GetY() const;
+        [[nodiscard]] double GetZ() const;
+        [[nodiscard]] double GetW() const;
+        void SetX(double x);
+        void SetY(double y);
+        void SetZ(double z);
+        void SetW(double w);
+
+        static bool IsEqual(const Tuple & lhs, const Tuple & rhs);
     };
 }
 
