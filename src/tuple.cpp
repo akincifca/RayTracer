@@ -1,8 +1,3 @@
-//
-// Created by Fatih Can AKINCI on 10.03.2021.
-// 
-//
-
 #include "tuple.h"
 #include "equal_double.h"
 

@@ -1,8 +1,3 @@
-//
-// Created by Fatih Can AKINCI on 10.03.2021.
-// 
-//
-
 #ifndef RAYTRACER_EQUAL_DOUBLE_H
 #define RAYTRACER_EQUAL_DOUBLE_H
 

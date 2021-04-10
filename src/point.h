@@ -1,8 +1,3 @@
-//
-// Created by Fatih Can AKINCI on 10.03.2021.
-// 
-//
-
 #ifndef RAYTRACER_POINT_H
 #define RAYTRACER_POINT_H
 

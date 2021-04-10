@@ -1,7 +1,3 @@
-//
-// Created by Fatih Can AKINCI on 10.03.2021.
-// 
-//
 #include "catch.hpp"
 #include "equal_double.h"
 #include "tuple.h"
