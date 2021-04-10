@@ -1,6 +1,6 @@
 //
 // Created by Fatih Can AKINCI on 10.03.2021.
-// HAVELSAN AS
+// 
 //
 
 #ifndef RAYTRACER_VECTOR_H

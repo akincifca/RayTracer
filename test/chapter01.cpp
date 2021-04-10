@@ -1,14 +1,12 @@
 //
 // Created by Fatih Can AKINCI on 10.03.2021.
-// HAVELSAN AS
+// 
 //
 #include "catch.hpp"
 #include "equal_double.h"
 #include "tuple.h"
 #include "vector.h"
 #include "point.h"
-
-#include <iostream>
 
 using namespace raytracer;
 
