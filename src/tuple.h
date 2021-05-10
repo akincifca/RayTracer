@@ -1,29 +1,34 @@
+//
+// Created by Fatih Can AKINCI on 5/10/21.
+// twitter, github: akincifca
+//
+
 #ifndef RAYTRACER_TUPLE_H
 #define RAYTRACER_TUPLE_H
 
 namespace raytracer {
+    class Tuple;
+    bool IsEqual(const Tuple &first, const Tuple &second);
+    Tuple AddTuples(const Tuple &first, const Tuple &second);
+
     class Tuple {
-    private:
+    protected:
         double x_;
         double y_;
         double z_;
         double w_;
     public:
-        Tuple();
-        explicit Tuple(double x, double y, double z, double w);
-        Tuple operator+(const Tuple & rhs) const;
-        virtual ~Tuple();
+        explicit Tuple(double x, double y,
+                       double z, double w);
 
-        [[nodiscard]] double GetX() const;
-        [[nodiscard]] double GetY() const;
-        [[nodiscard]] double GetZ() const;
-        [[nodiscard]] double GetW() const;
-        void SetX(double x);
-        void SetY(double y);
-        void SetZ(double z);
-        void SetW(double w);
+        [[nodiscard]] double GetX() const {return x_;}
+        [[nodiscard]] double GetY() const {return y_;}
+        [[nodiscard]] double GetZ() const {return z_;}
+        [[nodiscard]] double GetW() const {return w_;}
 
-        static bool IsEqual(const Tuple & lhs, const Tuple & rhs);
+        friend bool IsEqual(const Tuple &first, const Tuple &second);
+
+        friend Tuple AddTuples(const Tuple &first, const Tuple &second); // TODO can be made more than one args
     };
 }
 

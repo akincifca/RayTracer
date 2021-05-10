@@ -1,3 +1,8 @@
+//
+// Created by Fatih Can AKINCI on 5/10/21.
+// twitter, github: akincifca
+//
+
 #ifndef RAYTRACER_VECTOR_H
 #define RAYTRACER_VECTOR_H
 
@@ -7,11 +12,13 @@ namespace raytracer {
 
     class Vector : public Tuple {
     public:
-        Vector() : Tuple() {}
-        Vector(double x, double y, double z) :
-                Tuple(x, y, z, 0.0) {}
+        explicit Vector(double x,
+                        double y,
+                        double z);
     };
 }
+
+
 
 
 #endif //RAYTRACER_VECTOR_H

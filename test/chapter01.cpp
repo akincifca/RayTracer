@@ -33,13 +33,13 @@ TEST_CASE("Test Point") {
 TEST_CASE("Compare Tuples for Equality") {
     Tuple a(2, 2, 2, 1);
     Tuple b(2, 2, 2, 1);
-    REQUIRE(Tuple::IsEqual(a, b));
+    REQUIRE(IsEqual(a, b));
 }
 
 TEST_CASE("Add two Tuples") {
     Tuple a(3, -2, 5, 1);
     Tuple b(-2, 3, 1, 0);
-    Tuple sum = a + b;
+    Tuple sum = AddTuples(a, b);
     REQUIRE(EqualDouble(1,sum.GetX()));
     REQUIRE(EqualDouble(1,sum.GetY()));
     REQUIRE(EqualDouble(6,sum.GetZ()));
