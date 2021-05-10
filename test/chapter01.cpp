@@ -39,7 +39,7 @@ TEST_CASE("Compare Tuples for Equality") {
 TEST_CASE("Add two Tuples") {
     Tuple a(3, -2, 5, 1);
     Tuple b(-2, 3, 1, 0);
-    Tuple sum = AddTuples(a, b);
+    Tuple sum = a + b;
     REQUIRE(EqualDouble(1,sum.GetX()));
     REQUIRE(EqualDouble(1,sum.GetY()));
     REQUIRE(EqualDouble(6,sum.GetZ()));
