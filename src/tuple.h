@@ -27,7 +27,6 @@ namespace raytracer {
         [[nodiscard]] double GetW() const {return w_;}
 
         friend bool IsEqual(const Tuple &first, const Tuple &second);
-
         friend Tuple AddTuples(const Tuple &first, const Tuple &second); // TODO can be made more than one args
     };
 }
