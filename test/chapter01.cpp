@@ -80,3 +80,14 @@ TEST_CASE("Multiplying a tuple with a scalar") {
     REQUIRE(IsEqual(a * 3.5, Tuple {3.5, -7, 10.5, -14}));
     REQUIRE(IsEqual(3.5 * a, Tuple {3.5, -7, 10.5, -14}));
 }
+
+TEST_CASE("Multiplying a tuple with a fraction") {
+    Tuple a {1, -2, 3, -4};
+    REQUIRE(IsEqual(a * 0.5, Tuple {0.5, -1, 1.5, -2}));
+    REQUIRE(IsEqual(0.5 * a, Tuple {0.5, -1, 1.5, -2}));
+}
+
+TEST_CASE("Dividing a tuple by a scalar") {
+    Tuple a {1, -2, 3, -4};
+    REQUIRE(IsEqual(a / 2, Tuple {0.5, -1, 1.5, -2}));
+}

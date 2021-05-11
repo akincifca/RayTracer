@@ -11,7 +11,7 @@ using namespace rt;
 int main() {
 
     Tuple t1 {1, 2, 3, 4};
-    Tuple t2 = -t1;
+    Tuple t2 = t1 / 2;
 
     std::cout << "t1.w: " << t1.GetW() << std::endl;
     std::cout << "t2.w: " << t2.GetW() << std::endl;

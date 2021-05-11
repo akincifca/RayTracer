@@ -55,3 +55,7 @@ rt::Tuple rt::operator*(double scalar, const rt::Tuple &second) {
                      second.w_ * scalar);
 }
 
+rt::Tuple rt::Tuple::operator/(double scalar) const {
+    return *this * (1 / scalar);
+}
+
