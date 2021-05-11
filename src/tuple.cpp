@@ -3,6 +3,7 @@
 // twitter, github: akincifca
 //
 #include "tuple.h"
+#include "equal_double.h"
 
 rt::Tuple::Tuple(double x, double y, double z, double w) :
 x_(x),
@@ -14,10 +15,10 @@ w_(w)
 }
 
 bool rt::IsEqual(const Tuple &first, const Tuple &second) {
-    return  first.GetX() == second.GetX() &&
-            first.GetY() == second.GetY() &&
-            first.GetZ() == second.GetZ() &&
-            first.GetW() == second.GetW();
+    return  EqualDouble(first.GetX(), second.GetX()) &&
+            EqualDouble(first.GetY(), second.GetY()) &&
+            EqualDouble(first.GetZ(), second.GetZ()) &&
+            EqualDouble(first.GetW(), second.GetW());
 }
 
 rt::Tuple rt::operator+(const rt::Tuple &first, const rt::Tuple &second) {

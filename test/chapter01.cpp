@@ -94,25 +94,41 @@ TEST_CASE("Dividing a tuple by a scalar") {
 
 TEST_CASE("Computing magnitude of vector(1,0,0)") {
     Vector v {1, 0, 0};
-    REQUIRE(1.0 == v.Magnitude());
+    REQUIRE(1.0 == Magnitude(v));
 }
 
 TEST_CASE("Computing magnitude of vector(0,1,0)") {
     Vector v {0, 1, 0};
-    REQUIRE(1.0 == v.Magnitude());
+    REQUIRE(1.0 == Magnitude(v));
 }
 
 TEST_CASE("Computing magnitude of vector(0,0,1)") {
     Vector v {0, 0, 1};
-    REQUIRE(1.0 == v.Magnitude());
+    REQUIRE(1.0 == Magnitude(v));
 }
 
 TEST_CASE("Computing magnitude of vector(1,2,3)") {
     Vector v {1, 2, 3};
-    REQUIRE(std::sqrt(14) == v.Magnitude());
+    REQUIRE(std::sqrt(14) == Magnitude(v));
 }
 
 TEST_CASE("Computing magnitude of vector(-1,-2,-3)") {
     Vector v {-1, -2, -3};
-    REQUIRE(std::sqrt(14) == v.Magnitude());
+    REQUIRE(std::sqrt(14) == Magnitude(v));
+}
+
+TEST_CASE("Normalizing vector(4,0,0) gives (1,0,0)") {
+    Vector v {4, 0, 0};
+    REQUIRE(IsEqual(Normalize(v), Vector {1, 0, 0}));
+}
+
+TEST_CASE("Normalizing vector(1,2,3)") {
+    Vector v {1, 2, 3};
+    REQUIRE(IsEqual(Normalize(v), Vector {0.26726, 0.53452, 0.80178}));
+}
+
+TEST_CASE("The magnitude of a normalized vector") {
+    Vector v {1, 2, 3};
+    Vector norm {Normalize(v)};
+    REQUIRE(Magnitude(norm) == 1);
 }

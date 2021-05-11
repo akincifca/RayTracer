@@ -14,9 +14,16 @@ Tuple{x, y, z, 0.0}
 
 }
 
-double Vector::Magnitude() const {
-    return std::sqrt(std::pow(x_, 2) +
-                     std::pow(y_, 2) +
-                     std::pow(z_, 2) +
-                     std::pow(w_, 2));
+double rt::Magnitude(const Vector &vector) {
+    return std::sqrt(std::pow(vector.GetX(), 2) +
+                     std::pow(vector.GetY(), 2) +
+                     std::pow(vector.GetZ(), 2) +
+                     std::pow(vector.GetW(), 2));
+}
+
+Vector rt::Normalize(const Vector &vector) {
+    double magnitude = Magnitude(vector);
+    return Vector{vector.GetX() / magnitude,
+                  vector.GetY() / magnitude,
+                  vector.GetZ() / magnitude};
 }

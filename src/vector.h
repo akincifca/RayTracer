@@ -9,6 +9,9 @@
 #include "tuple.h"
 
 namespace rt {
+    class Vector;
+    double Magnitude(const Vector &vector);
+    Vector Normalize(const Vector &vector);
 
     class Vector : public Tuple {
     public:
@@ -16,7 +19,8 @@ namespace rt {
                         double y,
                         double z);
 
-        [[nodiscard]] double Magnitude() const;
+        friend double Magnitude(const Vector &vector);
+        friend Vector Normalize(const Vector &vector);
     };
 }
 
