@@ -41,3 +41,17 @@ rt::Tuple rt::Tuple::operator-() const {
     return rt::Tuple(0 - x_, 0 - y_, 0 - z_, 0- w_);
 }
 
+rt::Tuple rt::Tuple::operator*(double scalar) const {
+    return rt::Tuple(x_ * scalar,
+                     y_ * scalar,
+                     z_ * scalar,
+                     w_ * scalar);
+}
+
+rt::Tuple rt::operator*(double scalar, const rt::Tuple &second) {
+    return rt::Tuple(second.x_ * scalar,
+                     second.y_ * scalar,
+                     second.z_ * scalar,
+                     second.w_ * scalar);
+}
+

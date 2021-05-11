@@ -74,3 +74,9 @@ TEST_CASE("Negating a tuple") {
     Tuple a {1, -2, 3, -4};
     REQUIRE(IsEqual(-a, Tuple {-1, 2, -3, 4}));
 }
+
+TEST_CASE("Multiplying a tuple with a scalar") {
+    Tuple a {1, -2, 3, -4};
+    REQUIRE(IsEqual(a * 3.5, Tuple {3.5, -7, 10.5, -14}));
+    REQUIRE(IsEqual(3.5 * a, Tuple {3.5, -7, 10.5, -14}));
+}
