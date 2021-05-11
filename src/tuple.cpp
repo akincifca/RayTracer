@@ -23,10 +23,17 @@ bool raytracer::IsEqual(const Tuple &first, const Tuple &second) {
 }
 
 raytracer::Tuple raytracer::operator+(const raytracer::Tuple &first, const raytracer::Tuple &second) {
-    assert((first.GetW() + second.GetW()) <= 1 && "Only Point+Vector or Vector+Vector is allowed");
+    // Beware that adding two points makes no sense, w=2 (neither a point nor a vector)
     return raytracer::Tuple{first.GetX() + second.GetX(),
                             first.GetY() + second.GetY(),
                             first.GetZ() + second.GetZ(),
                             first.GetW() + second.GetW()};
+}
+
+raytracer::Tuple raytracer::operator-(const raytracer::Tuple &first, const raytracer::Tuple &second) {
+    return raytracer::Tuple{first.GetX() - second.GetX(),
+                            first.GetY() - second.GetY(),
+                            first.GetZ() - second.GetZ(),
+                            first.GetW() - second.GetW()};
 }
 

@@ -10,6 +10,7 @@ namespace raytracer {
     class Tuple;
     bool IsEqual(const Tuple &first, const Tuple &second);
     Tuple operator+(const Tuple &first, const Tuple &second);
+    Tuple operator-(const Tuple &first, const Tuple &second);
 
     class Tuple {
     protected:
@@ -28,6 +29,7 @@ namespace raytracer {
 
         friend bool IsEqual(const Tuple &first, const Tuple &second);
         friend Tuple operator+(const Tuple &first, const Tuple &second);
+        friend Tuple operator-(const Tuple &first, const Tuple &second);
     };
 }
 
