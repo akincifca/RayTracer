@@ -37,3 +37,7 @@ rt::Tuple rt::operator-(const rt::Tuple &first, const rt::Tuple &second) {
                             first.GetW() - second.GetW()};
 }
 
+rt::Tuple rt::Tuple::operator-() const {
+    return rt::Tuple(0 - x_, 0 - y_, 0 - z_, 0- w_);
+}
+

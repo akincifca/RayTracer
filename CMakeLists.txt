@@ -9,6 +9,10 @@ add_library(raytracer
 add_executable(test_raytracer
         test/chapter01.cpp
         test/main.cpp)
+add_executable(example
+        examples/main.cpp)
 add_compile_options(-Wall -pedantic -Wextra)
-target_link_libraries(test_raytracer raytracer)
 target_include_directories(test_raytracer PRIVATE src)
+target_include_directories(example PRIVATE src)
+target_link_libraries(test_raytracer raytracer)
+target_link_libraries(example raytracer)

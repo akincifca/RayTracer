@@ -63,3 +63,14 @@ TEST_CASE("Subtracting two vectors") {
     Vector v2 {5, 6, 7};
     REQUIRE(IsEqual(v1 - v2, Vector{-2, -4, -6}));
 }
+
+TEST_CASE("Subtracting a vector from the zero vector") {
+    Vector zero {0, 0, 0};
+    Vector v {1, -2, 3};
+    REQUIRE(IsEqual(zero - v, Vector {-1, 2, -3}));
+}
+
+TEST_CASE("Negating a tuple") {
+    Tuple a {1, -2, 3, -4};
+    REQUIRE(IsEqual(-a, Tuple {-1, 2, -3, 4}));
+}
