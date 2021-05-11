@@ -6,7 +6,7 @@
 
 #include <cassert>
 
-raytracer::Tuple::Tuple(double x, double y, double z, double w) :
+rt::Tuple::Tuple(double x, double y, double z, double w) :
 x_(x),
 y_(y),
 z_(z),
@@ -15,23 +15,23 @@ w_(w)
 
 }
 
-bool raytracer::IsEqual(const Tuple &first, const Tuple &second) {
+bool rt::IsEqual(const Tuple &first, const Tuple &second) {
     return  first.GetX() == second.GetX() &&
             first.GetY() == second.GetY() &&
             first.GetZ() == second.GetZ() &&
             first.GetW() == second.GetW();
 }
 
-raytracer::Tuple raytracer::operator+(const raytracer::Tuple &first, const raytracer::Tuple &second) {
+rt::Tuple rt::operator+(const rt::Tuple &first, const rt::Tuple &second) {
     // Beware that adding two points makes no sense, w=2 (neither a point nor a vector)
-    return raytracer::Tuple{first.GetX() + second.GetX(),
+    return rt::Tuple{first.GetX() + second.GetX(),
                             first.GetY() + second.GetY(),
                             first.GetZ() + second.GetZ(),
                             first.GetW() + second.GetW()};
 }
 
-raytracer::Tuple raytracer::operator-(const raytracer::Tuple &first, const raytracer::Tuple &second) {
-    return raytracer::Tuple{first.GetX() - second.GetX(),
+rt::Tuple rt::operator-(const rt::Tuple &first, const rt::Tuple &second) {
+    return rt::Tuple{first.GetX() - second.GetX(),
                             first.GetY() - second.GetY(),
                             first.GetZ() - second.GetZ(),
                             first.GetW() - second.GetW()};

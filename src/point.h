@@ -8,7 +8,7 @@
 
 #include "tuple.h"
 
-namespace raytracer{
+namespace rt{
 
     class Point : public Tuple{
     public:

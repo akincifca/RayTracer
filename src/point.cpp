@@ -5,7 +5,7 @@
 
 #include "point.h"
 
-using namespace raytracer;
+using namespace rt;
 
 Point::Point(double x, double y, double z) :
 Tuple{x, y, z, 1.0}

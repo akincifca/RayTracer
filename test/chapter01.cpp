@@ -4,7 +4,7 @@
 #include "vector.h"
 #include "point.h"
 
-using namespace raytracer;
+using namespace rt;
 
 TEST_CASE("Test tuple") {
     Tuple a(4.3, -4.2, 3.1, 1.0);

@@ -4,7 +4,7 @@
 //
 
 #include "vector.h"
-using namespace raytracer;
+using namespace rt;
 
 Vector::Vector(double x, double y, double z) :
 Tuple{x, y, z, 0.0}

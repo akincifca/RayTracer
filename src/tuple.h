@@ -6,7 +6,7 @@
 #ifndef RAYTRACER_TUPLE_H
 #define RAYTRACER_TUPLE_H
 
-namespace raytracer {
+namespace rt {
     class Tuple;
     bool IsEqual(const Tuple &first, const Tuple &second);
     Tuple operator+(const Tuple &first, const Tuple &second);
