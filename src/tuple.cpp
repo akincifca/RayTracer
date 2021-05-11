@@ -4,8 +4,6 @@
 //
 #include "tuple.h"
 
-#include <cassert>
-
 rt::Tuple::Tuple(double x, double y, double z, double w) :
 x_(x),
 y_(y),

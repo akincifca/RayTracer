@@ -15,6 +15,8 @@ namespace rt {
         explicit Vector(double x,
                         double y,
                         double z);
+
+        [[nodiscard]] double Magnitude() const;
     };
 }
 

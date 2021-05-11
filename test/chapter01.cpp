@@ -91,3 +91,28 @@ TEST_CASE("Dividing a tuple by a scalar") {
     Tuple a {1, -2, 3, -4};
     REQUIRE(IsEqual(a / 2, Tuple {0.5, -1, 1.5, -2}));
 }
+
+TEST_CASE("Computing magnitude of vector(1,0,0)") {
+    Vector v {1, 0, 0};
+    REQUIRE(1.0 == v.Magnitude());
+}
+
+TEST_CASE("Computing magnitude of vector(0,1,0)") {
+    Vector v {0, 1, 0};
+    REQUIRE(1.0 == v.Magnitude());
+}
+
+TEST_CASE("Computing magnitude of vector(0,0,1)") {
+    Vector v {0, 0, 1};
+    REQUIRE(1.0 == v.Magnitude());
+}
+
+TEST_CASE("Computing magnitude of vector(1,2,3)") {
+    Vector v {1, 2, 3};
+    REQUIRE(std::sqrt(14) == v.Magnitude());
+}
+
+TEST_CASE("Computing magnitude of vector(-1,-2,-3)") {
+    Vector v {-1, -2, -3};
+    REQUIRE(std::sqrt(14) == v.Magnitude());
+}
