@@ -132,3 +132,9 @@ TEST_CASE("The magnitude of a normalized vector") {
     Vector norm {Normalize(v)};
     REQUIRE(Magnitude(norm) == 1);
 }
+
+TEST_CASE("The dot product of two tuples") {
+    Vector a {1, 2, 3};
+    Vector b {2, 3,4};
+    REQUIRE(Dot(a, b) == 20);
+}

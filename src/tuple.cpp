@@ -58,3 +58,10 @@ rt::Tuple rt::Tuple::operator/(double scalar) const {
     return *this * (1 / scalar);
 }
 
+double rt::Dot(const rt::Tuple &first, const rt::Tuple &second) {
+    return  first.GetX() * second.GetX() +
+            first.GetY() * second.GetY() +
+            first.GetZ() * second.GetZ() +
+            first.GetW() * second.GetW();
+}
+

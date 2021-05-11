@@ -12,6 +12,7 @@ namespace rt {
     Tuple operator+(const Tuple &first, const Tuple &second);
     Tuple operator-(const Tuple &first, const Tuple &second);
     Tuple operator*(double scalar, const Tuple &second);
+    double Dot(const Tuple &first, const Tuple &second);
 
     class Tuple {
     protected:
@@ -34,6 +35,7 @@ namespace rt {
         friend Tuple operator+(const Tuple &first, const Tuple &second);
         friend Tuple operator-(const Tuple &first, const Tuple &second);
         friend Tuple operator*(double scalar, const Tuple &second);
+        friend double Dot(const Tuple &first, const Tuple &second);
     };
 }
 
